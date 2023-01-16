@@ -4,8 +4,8 @@ const prisma = new PrismaClient();
 export default defineEventHandler(async (event) => {
   const user = await prisma.user.create({
     data: {
-      name: "Søren Bramer-Schmidt",
-      email: "schmidt@prisma.io",
+      name: "Juanito Muchotrigo",
+      email: "Muchotrigo@gmail.com",
     },
   });
 

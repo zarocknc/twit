@@ -2,9 +2,9 @@
     <div>
         <h1>Hola gentita</h1>
 
-        <div v-for="holies in holi">
-            <h1>{{ holies }}</h1>
+        <div v-for="(user, id) in holi?.data">
         
+            <p>{{ user }} </p>
         </div>
 
     </div>

@@ -4,6 +4,7 @@
         <h1>{{ hola }}</h1>
         <h2> {{ anotate }}</h2>
         <button @click="createUser">cambiar</button>
+        <ButtonsDefault>Hola</ButtonsDefault>
 
 
         <div>
