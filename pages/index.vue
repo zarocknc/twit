@@ -1,11 +1,14 @@
 <template>
     <div>
-        <h1>Hola gentita</h1>
-
-        <div v-for="(user, id) in holi?.data">
+        <div v-for="user in holi?.data">
         
-            <p>{{ user }} </p>
+            <p class="bg-gray-800 text-white p-6 cursor-pointer">{{ user.name }} </p>
+            <div class="bg-gray-100 p-6">
+                <p>{{ user.email }}</p>
+                <p>{{ user.id }}</p>
+            </div>
         </div>
+        
 
     </div>
 </template>
