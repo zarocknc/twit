@@ -6,17 +6,17 @@
                 <div v-for="link in enlaces">
                     <li>
                         <NuxtLink :to="link.link">
-                        {{ link.name }}
-</NuxtLink>
+                            {{ link.name }}
+                        </NuxtLink>
                     </li>
-                
+
                 </div>
             </ul>
         </nav>
 
 
         <div>
-            <slot/>
+            <slot />
         </div>
 
     </div>
@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 
-const enlaces = [{name: "Principal", link: "/"}, {name: "Ayuda", link: "/help"}]
+const enlaces = [{ name: "Principal", link: "/" }, { name: "Ayuda", link: "/help" }]
 
 </script>
 

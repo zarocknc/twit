@@ -8,7 +8,14 @@
                 <p>{{ user.id }}</p>
             </div>
         </div>
-        
+
+        <div>
+            contador {{ count }}
+
+            <br>
+            <button @click="count++">sumar</button>
+
+        </div>
 
     </div>
 </template>
@@ -16,6 +23,8 @@
 <script setup lang="ts">
 
     const { data: holi } = await useFetch('/api/notes')
+
+    const count = ref(0)
 </script>
 
 <style lang="scss" scoped>
