@@ -1,15 +1,14 @@
 <template>
     <div>
         <h1>Hola</h1>
-        <h1>{{ hola }}</h1>
-        <h2> {{ anotate }}</h2>
-        <button @click="createUser">cambiar</button>
-        <ButtonsDefault>Hola</ButtonsDefault>
+         <button @click="createUser">cambiar</button>
+        <!--<ButtonsDefault :propFunction="createUser">Hola</ButtonsDefault> -->
 
 
         <div>
 
-            <input v-model="userName">
+            <input class="border border-solid border-blue-500" v-model="userName" placeholder="nombre">
+            <input class="border border-solid border-blue-500" v-model="userMail" placeholder="E-mail">
         </div>
     </div>
 </template>
@@ -17,19 +16,18 @@
 <script setup lang="ts">
 import { PrismaClient } from "@prisma/client";
 
-const hola = "23"
+let userName = ref("")
+let userMail = ref("")
 
-let anotate = 322
-
-let userName = ""
-
-function changeNum() {
-    anotate = 233
-    console.log(anotate)
-}
 async function createUser() {
-    const { data: user } = await useFetch('/api/createUser')
-    console.log(user)
+    const hola = await useFetch('/api/createUser', {
+        method: "post",
+        body: {
+            newUserName: userName,
+            newMail: userMail,
+        }
+    })
+    console.log(hola)
 }
 
 
