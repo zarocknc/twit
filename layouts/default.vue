@@ -24,7 +24,7 @@
 
 <script setup lang="ts">
 
-const enlaces = [{ name: "Principal", link: "/" }, { name: "Ayuda", link: "/help" }]
+const enlaces = [{ name: "Principal", link: "/" }, { name: "Ayuda", link: "/help" }, {name: "Registro/Login", link: "/login"}]
 
 </script>
 
